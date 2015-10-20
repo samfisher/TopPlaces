@@ -15,6 +15,7 @@
 		208541F41BD6C624000E027D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208541F21BD6C624000E027D /* LaunchScreen.storyboard */; };
 		208541FF1BD6C624000E027D /* Top_PlacesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541FE1BD6C624000E027D /* Top_PlacesTests.m */; };
 		2085420A1BD6C624000E027D /* Top_PlacesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 208542091BD6C624000E027D /* Top_PlacesUITests.m */; };
+		2085421B1BD6C73E000E027D /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2085421A1BD6C73E000E027D /* FlickrFetcher.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		208542051BD6C624000E027D /* Top PlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Top PlacesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		208542091BD6C624000E027D /* Top_PlacesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Top_PlacesUITests.m; sourceTree = "<group>"; };
 		2085420B1BD6C624000E027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		208542181BD6C73E000E027D /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
+		208542191BD6C73E000E027D /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
+		2085421A1BD6C73E000E027D /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				208541EA1BD6C624000E027D /* ViewController.h */,
 				208541EB1BD6C624000E027D /* ViewController.m */,
 				208541ED1BD6C624000E027D /* Main.storyboard */,
+				208542171BD6C73E000E027D /* Flickr Fetcher */,
 				208541F01BD6C624000E027D /* Assets.xcassets */,
 				208541F21BD6C624000E027D /* LaunchScreen.storyboard */,
 				208541F51BD6C624000E027D /* Info.plist */,
@@ -138,6 +143,16 @@
 				2085420B1BD6C624000E027D /* Info.plist */,
 			);
 			path = "Top PlacesUITests";
+			sourceTree = "<group>";
+		};
+		208542171BD6C73E000E027D /* Flickr Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				208542181BD6C73E000E027D /* FlickrAPIKey.h */,
+				208542191BD6C73E000E027D /* FlickrFetcher.h */,
+				2085421A1BD6C73E000E027D /* FlickrFetcher.m */,
+			);
+			path = "Flickr Fetcher";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +287,7 @@
 			files = (
 				208541EC1BD6C624000E027D /* ViewController.m in Sources */,
 				208541E91BD6C624000E027D /* AppDelegate.m in Sources */,
+				2085421B1BD6C73E000E027D /* FlickrFetcher.m in Sources */,
 				208541E61BD6C624000E027D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +514,7 @@
 				208542101BD6C624000E027D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		208542111BD6C624000E027D /* Build configuration list for PBXNativeTarget "Top PlacesTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +523,7 @@
 				208542131BD6C624000E027D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		208542141BD6C624000E027D /* Build configuration list for PBXNativeTarget "Top PlacesUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +532,7 @@
 				208542161BD6C624000E027D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
