@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlickrHelper.h"
 
 @interface ViewController : UIViewController
 
