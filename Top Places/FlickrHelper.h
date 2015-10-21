@@ -12,4 +12,11 @@
 
 + (void)loadTopPlacesOnCompletion:(void (^)(NSArray *photos, NSError *error))completionHandler;
 
++ (NSString *)countryOfPlace:(NSDictionary *)place;
++ (NSString *)titleOfPlace:(NSDictionary *)place;
++ (NSString *)subtitleOfPlace:(NSDictionary *)place;
++ (NSArray *)sortPlaces:(NSArray *)places;
++ (NSDictionary *)placesByCountries:(NSArray *)places;
++ (NSArray *)countriesFromPlacesByCountry:(NSDictionary *)placesByCountry;
+
 @end
