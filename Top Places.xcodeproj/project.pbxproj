@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2077EABB1BD8119F0094DF68 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2077EABA1BD8119F0094DF68 /* FlickrHelper.m */; settings = {ASSET_TAGS = (); }; };
+		2077EAC11BD8322E0094DF68 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 		208541E61BD6C624000E027D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541E51BD6C624000E027D /* main.m */; };
 		208541E91BD6C624000E027D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541E81BD6C624000E027D /* AppDelegate.m */; };
 		208541EC1BD6C624000E027D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541EB1BD6C624000E027D /* ViewController.m */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2077EAB91BD8119F0094DF68 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		2077EABA1BD8119F0094DF68 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
+		2077EAC01BD8322E0094DF68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Top Places/Base.lproj/Main_iPad.storyboard"; sourceTree = "<group>"; };
 		208541E11BD6C624000E027D /* Top Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		208541E51BD6C624000E027D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		208541E71BD6C624000E027D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				208541EA1BD6C624000E027D /* ViewController.h */,
 				208541EB1BD6C624000E027D /* ViewController.m */,
 				208541ED1BD6C624000E027D /* Main.storyboard */,
+				2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */,
 				208542171BD6C73E000E027D /* Flickr Fetcher */,
 				208541F01BD6C624000E027D /* Assets.xcassets */,
 				208541F21BD6C624000E027D /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				208541F41BD6C624000E027D /* LaunchScreen.storyboard in Resources */,
+				2077EAC11BD8322E0094DF68 /* Main_iPad.storyboard in Resources */,
 				208541F11BD6C624000E027D /* Assets.xcassets in Resources */,
 				208541EF1BD6C624000E027D /* Main.storyboard in Resources */,
 			);
@@ -330,6 +334,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2077EAC01BD8322E0094DF68 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		208541ED1BD6C624000E027D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,10 +449,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Top Places/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sam.fisher.apps.Top-Places";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -448,10 +462,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Top Places/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sam.fisher.apps.Top-Places";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
