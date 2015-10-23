@@ -116,4 +116,34 @@
     return countries;
 }
 
+
+#define FLICKR_UNKNOWN_PHOTO_TITLE @"Unknown"
++ (NSString *)titleOfPhoto:(NSDictionary *)photo
+{
+    NSString *title = [photo valueForKeyPath:FLICKR_PHOTO_TITLE];
+    if ([title length]) return title;
+    
+    title = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+    if ([title length]) return title;
+    
+    return FLICKR_UNKNOWN_PHOTO_TITLE;
+}
+
++ (NSString *)subtitleOfPhoto:(NSDictionary *)photo
+{
+    NSString *title = [FlickrHelper titleOfPhoto:photo];
+    if ([title isEqualToString:FLICKR_UNKNOWN_PHOTO_TITLE]) return @"";
+    
+    NSString *subtitle = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+    if ([title isEqualToString:subtitle]) return @"";
+    
+    return subtitle;
+}
+
+
++ (NSURL *)URLforPhoto:(NSDictionary *)photo
+{
+    return [FlickrHelper URLforPhoto:photo format:FlickrPhotoFormatLarge];
+}
+
 @end

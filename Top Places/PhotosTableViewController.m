@@ -7,6 +7,7 @@
 //
 
 #import "PhotosTableViewController.h"
+#import "ImageViewController.h"
 
 @interface PhotosTableViewController ()
 
@@ -55,13 +56,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PhotoCell";
+    static NSString *CellIdentifier = @"Photo Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
+    
     NSDictionary *photo = self.photos[indexPath.row];
-    cell.textLabel.text = [photo valueForKeyPath:FLICKR_PHOTO_TITLE];
-    cell.detailTextLabel.text = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+    cell.textLabel.text = [FlickrHelper titleOfPhoto:photo];
+    cell.detailTextLabel.text = [FlickrHelper subtitleOfPhoto:photo];
+    
     return cell;
+}
+
+- (void)prepareImageViewController:(ImageViewController *)vc
+              forPhoto:(NSDictionary *)photo
+{
+    vc.imageURL = [FlickrHelper URLforPhoto:photo];
+    vc.title = [FlickrHelper titleOfPhoto:photo];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    if ([segue.identifier isEqualToString:@"Show Photo"] && indexPath) {
+        [self prepareImageViewController:segue.destinationViewController
+                    forPhoto:self.photos[indexPath.row]];
+    }
 }
 
 @end

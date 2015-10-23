@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200AD7C51BDAC73A00DE09A4 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2077EABB1BD8119F0094DF68 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2077EABA1BD8119F0094DF68 /* FlickrHelper.m */; settings = {ASSET_TAGS = (); }; };
 		2077EAC11BD8322E0094DF68 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 		208541E61BD6C624000E027D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541E51BD6C624000E027D /* main.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200AD7C31BDAC73A00DE09A4 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		2077EAB91BD8119F0094DF68 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		2077EABA1BD8119F0094DF68 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
 		2077EAC01BD8322E0094DF68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Top Places/Base.lproj/Main_iPad.storyboard"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				208541EA1BD6C624000E027D /* ViewController.h */,
 				208541EB1BD6C624000E027D /* ViewController.m */,
 				208541ED1BD6C624000E027D /* Main.storyboard */,
+				200AD7C31BDAC73A00DE09A4 /* ImageViewController.h */,
+				200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */,
 				2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */,
 				208541F21BD6C624000E027D /* LaunchScreen.storyboard */,
 				208541F51BD6C624000E027D /* Info.plist */,
@@ -314,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200AD7C51BDAC73A00DE09A4 /* ImageViewController.m in Sources */,
 				2077EABB1BD8119F0094DF68 /* FlickrHelper.m in Sources */,
 				20B8AEA11BD968F700B15A9D /* PlacePhotosTableViewController.m in Sources */,
 				20B8AE981BD954A800B15A9D /* PlacesTableViewController.m in Sources */,

@@ -54,7 +54,7 @@ titleForHeaderInSection:(NSInteger)section
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Place Cell";
+    static NSString *CellIdentifier = @"PlaceCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     NSDictionary *place = self.placesByCountry[self.countries[indexPath.section]][indexPath.row];
@@ -73,7 +73,7 @@ titleForHeaderInSection:(NSInteger)section
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if ([segue.identifier isEqualToString:@"Show Place"] && indexPath)
+    if ([segue.identifier isEqualToString:@"ShowPlace"] && indexPath)
     {
         [self preparePhotosTVC:segue.destinationViewController
                       forPlace:self.placesByCountry[self.countries[indexPath.section]][indexPath.row]];
