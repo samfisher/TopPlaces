@@ -26,7 +26,8 @@
     [self.tableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:YES];
     
     [FlickrHelper loadTopPlacesOnCompletion:^(NSArray *places, NSError *error) {
-        if (!error) {
+        if (!error)
+        {
             self.places = places;
             [self.refreshControl endRefreshing];
         } else {

@@ -58,7 +58,7 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier=""/>
                                 <connections>
-                                    <segue destination="AiM-v2-ev1" kind="show" identifier="PhotoListSegue" id="dZc-qQ-RPK"/>
+                                    <segue destination="AiM-v2-ev1" kind="show" identifier="ShowPlace" id="dZc-qQ-RPK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,6 +69,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Top Places" id="JWj-di-VxA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8uO-pn-EWU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="fetchPlaces" destination="moe-zT-DOd" eventType="valueChanged" id="1Eq-pH-zjJ"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d5-pA-EeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,8 +125,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Zbk-51-Rck"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="NhQ-y1-7RU">
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="0u3-pQ-w4j">
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="fetchPhotos" destination="AiM-v2-ev1" eventType="valueChanged" id="e8L-cj-ogC"/>
+                        </connections>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOF-Ax-5yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7MK-4s-287" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714.5" y="-80.5"/>
+            <point key="canvasLocation" x="1754.5" y="51.5"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="pDw-Ni-nhr">
