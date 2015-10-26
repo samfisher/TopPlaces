@@ -114,7 +114,7 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="Photo Cell"/>
                                 <connections>
-                                    <segue destination="jEG-YQ-Gq3" kind="show" id="Wif-3M-6yC"/>
+                                    <segue destination="jEG-YQ-Gq3" kind="show" identifier="ShowPhoto" id="Wif-3M-6yC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -237,6 +237,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wif-3M-6yC"/>
+        <segue reference="InX-Ow-cYh"/>
     </inferredMetricsTieBreakers>
 </document>

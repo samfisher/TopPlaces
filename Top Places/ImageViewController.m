@@ -26,12 +26,6 @@
     [self.scrollView addSubview:self.imageView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Properties
 - (void)setScrollView:(UIScrollView *)scrollView
 {
@@ -42,19 +36,6 @@
     _scrollView.contentSize = self.image ? self.image.size : CGSizeZero;
 }
 
-- (UIImageView *)imageView
-{
-    if (!_imageView) {
-        _imageView = [[UIImageView alloc] init];
-    }
-    return _imageView;
-}
-
-- (UIImage *)image
-{
-    return self.imageView.image;
-}
-
 - (void)setImage:(UIImage *)image
 {
     self.scrollView.zoomScale = 1.0;
@@ -63,6 +44,20 @@
     self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
     self.scrollView.contentSize = self.image ? self.image.size : CGSizeZero;
     [self.spinner stopAnimating];
+}
+
+- (UIImage *)image
+{
+    return self.imageView.image;
+}
+
+- (UIImageView *)imageView
+{
+    if (!_imageView)
+    {
+        _imageView = [[UIImageView alloc] init];
+    }
+    return _imageView;
 }
 
 #pragma mark - Delegate methods
@@ -99,7 +94,5 @@
     _imageURL = imageURL;
     [self fetchImage];
 }
-
-
 
 @end
