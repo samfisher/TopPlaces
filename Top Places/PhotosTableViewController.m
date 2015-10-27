@@ -8,6 +8,7 @@
 
 #import "PhotosTableViewController.h"
 #import "ImageViewController.h"
+#import "RecentPhotos.h"
 
 @interface PhotosTableViewController ()
 
@@ -59,6 +60,7 @@
 {
     vc.imageURL = [FlickrHelper URLforPhoto:photo];
     vc.title = [FlickrHelper titleOfPhoto:photo];
+    [RecentPhotos addPhoto:photo];
 }
 
 

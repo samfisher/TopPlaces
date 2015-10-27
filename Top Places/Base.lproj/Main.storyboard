@@ -170,13 +170,13 @@
         <!--Root View Controller-->
         <scene sceneID="pDw-Ni-nhr">
             <objects>
-                <tableViewController id="mvL-Mi-zM8" sceneMemberID="viewController">
+                <tableViewController id="mvL-Mi-zM8" customClass="RecentPhotosTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5s3-hM-ic2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentItemsCell" textLabel="Ihj-MK-rcs" detailTextLabel="nDn-0B-gmL" style="IBUITableViewCellStyleSubtitle" id="iIq-Ce-5wn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" textLabel="Ihj-MK-rcs" detailTextLabel="nDn-0B-gmL" style="IBUITableViewCellStyleSubtitle" id="iIq-Ce-5wn">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIq-Ce-5wn" id="8F3-fk-wcq">
@@ -200,7 +200,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jEG-YQ-Gq3" kind="show" id="InX-Ow-cYh"/>
+                                    <segue destination="jEG-YQ-Gq3" kind="show" identifier="ShowPhoto" id="InX-Ow-cYh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -210,10 +210,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="JbO-Tp-Bma"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="nlU-QH-6Xj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYw-ud-dL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822.5" y="373.5"/>
+            <point key="canvasLocation" x="1034.5" y="395.5"/>
         </scene>
         <!--Recents-->
         <scene sceneID="TKl-ET-Sve">

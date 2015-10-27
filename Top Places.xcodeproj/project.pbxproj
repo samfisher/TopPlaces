@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		200AD7C51BDAC73A00DE09A4 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		200AD7CA1BE0078600DE09A4 /* RecentPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 200AD7C91BE0078600DE09A4 /* RecentPhotos.m */; settings = {ASSET_TAGS = (); }; };
+		200AD7CD1BE0099F00DE09A4 /* RecentPhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200AD7CC1BE0099F00DE09A4 /* RecentPhotosTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2077EABB1BD8119F0094DF68 /* FlickrHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2077EABA1BD8119F0094DF68 /* FlickrHelper.m */; settings = {ASSET_TAGS = (); }; };
 		2077EAC11BD8322E0094DF68 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 		208541E61BD6C624000E027D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 208541E51BD6C624000E027D /* main.m */; };
@@ -45,6 +47,10 @@
 /* Begin PBXFileReference section */
 		200AD7C31BDAC73A00DE09A4 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		200AD7C81BE0078600DE09A4 /* RecentPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotos.h; sourceTree = "<group>"; };
+		200AD7C91BE0078600DE09A4 /* RecentPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotos.m; sourceTree = "<group>"; };
+		200AD7CB1BE0099F00DE09A4 /* RecentPhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotosTableViewController.h; sourceTree = "<group>"; };
+		200AD7CC1BE0099F00DE09A4 /* RecentPhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosTableViewController.m; sourceTree = "<group>"; };
 		2077EAB91BD8119F0094DF68 /* FlickrHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrHelper.h; sourceTree = "<group>"; };
 		2077EABA1BD8119F0094DF68 /* FlickrHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrHelper.m; sourceTree = "<group>"; };
 		2077EAC01BD8322E0094DF68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Top Places/Base.lproj/Main_iPad.storyboard"; sourceTree = "<group>"; };
@@ -102,6 +108,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200AD7C61BDFDF8B00DE09A4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				208541EA1BD6C624000E027D /* ViewController.h */,
+				208541EB1BD6C624000E027D /* ViewController.m */,
+				200AD7C31BDAC73A00DE09A4 /* ImageViewController.h */,
+				200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */,
+				200AD7CB1BE0099F00DE09A4 /* RecentPhotosTableViewController.h */,
+				200AD7CC1BE0099F00DE09A4 /* RecentPhotosTableViewController.m */,
+				20B8AE961BD954A800B15A9D /* PlacesTableViewController.h */,
+				20B8AE971BD954A800B15A9D /* PlacesTableViewController.m */,
+				20B8AE991BD958F500B15A9D /* TopPlacesTableViewController.h */,
+				20B8AE9A1BD958F500B15A9D /* TopPlacesTableViewController.m */,
+				20B8AE9C1BD9677D00B15A9D /* PhotosTableViewController.h */,
+				20B8AE9D1BD9677D00B15A9D /* PhotosTableViewController.m */,
+				20B8AE9F1BD968F700B15A9D /* PlacePhotosTableViewController.h */,
+				20B8AEA01BD968F700B15A9D /* PlacePhotosTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		200AD7C71BDFDFB100DE09A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				208541ED1BD6C624000E027D /* Main.storyboard */,
+				2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */,
+				208541F21BD6C624000E027D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		208541D81BD6C624000E027D = {
 			isa = PBXGroup;
 			children = (
@@ -129,23 +166,12 @@
 				208541E81BD6C624000E027D /* AppDelegate.m */,
 				2077EAB91BD8119F0094DF68 /* FlickrHelper.h */,
 				2077EABA1BD8119F0094DF68 /* FlickrHelper.m */,
-				20B8AE961BD954A800B15A9D /* PlacesTableViewController.h */,
-				20B8AE971BD954A800B15A9D /* PlacesTableViewController.m */,
-				20B8AE991BD958F500B15A9D /* TopPlacesTableViewController.h */,
-				20B8AE9A1BD958F500B15A9D /* TopPlacesTableViewController.m */,
-				20B8AE9C1BD9677D00B15A9D /* PhotosTableViewController.h */,
-				20B8AE9D1BD9677D00B15A9D /* PhotosTableViewController.m */,
-				20B8AE9F1BD968F700B15A9D /* PlacePhotosTableViewController.h */,
-				20B8AEA01BD968F700B15A9D /* PlacePhotosTableViewController.m */,
-				208541EA1BD6C624000E027D /* ViewController.h */,
-				208541EB1BD6C624000E027D /* ViewController.m */,
-				208541ED1BD6C624000E027D /* Main.storyboard */,
-				200AD7C31BDAC73A00DE09A4 /* ImageViewController.h */,
-				200AD7C41BDAC73A00DE09A4 /* ImageViewController.m */,
-				2077EABF1BD8322E0094DF68 /* Main_iPad.storyboard */,
-				208541F21BD6C624000E027D /* LaunchScreen.storyboard */,
-				208541F51BD6C624000E027D /* Info.plist */,
+				200AD7C81BE0078600DE09A4 /* RecentPhotos.h */,
+				200AD7C91BE0078600DE09A4 /* RecentPhotos.m */,
+				200AD7C61BDFDF8B00DE09A4 /* ViewControllers */,
 				208542171BD6C73E000E027D /* Flickr Fetcher */,
+				200AD7C71BDFDFB100DE09A4 /* Storyboards */,
+				208541F51BD6C624000E027D /* Info.plist */,
 				208541F01BD6C624000E027D /* Assets.xcassets */,
 				208541E41BD6C624000E027D /* Supporting Files */,
 			);
@@ -322,12 +348,14 @@
 				200AD7C51BDAC73A00DE09A4 /* ImageViewController.m in Sources */,
 				2077EABB1BD8119F0094DF68 /* FlickrHelper.m in Sources */,
 				20B8AEA11BD968F700B15A9D /* PlacePhotosTableViewController.m in Sources */,
+				200AD7CD1BE0099F00DE09A4 /* RecentPhotosTableViewController.m in Sources */,
 				20B8AE981BD954A800B15A9D /* PlacesTableViewController.m in Sources */,
 				20B8AE9E1BD9677D00B15A9D /* PhotosTableViewController.m in Sources */,
 				208541EC1BD6C624000E027D /* ViewController.m in Sources */,
 				208541E91BD6C624000E027D /* AppDelegate.m in Sources */,
 				2085421B1BD6C73E000E027D /* FlickrFetcher.m in Sources */,
 				208541E61BD6C624000E027D /* main.m in Sources */,
+				200AD7CA1BE0078600DE09A4 /* RecentPhotos.m in Sources */,
 				20B8AE9B1BD958F500B15A9D /* TopPlacesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
